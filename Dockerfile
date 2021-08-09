@@ -8,7 +8,6 @@ RUN echo "deb https://packages.sury.org/php/ buster main" | tee /etc/apt/sources
 RUN apt-get -qq update
 
 RUN rm /etc/apt/preferences.d/no-debian-php
-RUN apt-get remove php7.4
 RUN apt-get -y install php7.4-fpm
 
 COPY ./src /var/www/html
